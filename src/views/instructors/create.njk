@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Instructor Register</title>
+    <link rel="stylesheet" href="styles/partials/instructors.css">
+{% endblock head %}
+
+{% block content %}
+    <form action="/instructors" class="card" method="POST">
+        <div class="card">
+            <section class="side-frame" style="background: url(https://source.unsplash.com/collection/3203326/900x900) no-repeat center center / cover"></section>
+            <section class="details">
+                <h3>New Instructor</h3>
+
+                <div class="item">
+                    <div>Name</div>
+                    <div><input type="text" name="name"></div>
+                </div>
+
+                <div class="item">
+                    <div>Avatar</div>
+                    <div><input type="url" name="avatar"></div>
+                </div>
+
+                <div class="item">
+                    <div>Gender</div>
+                    <div>
+                        <span><input type="radio" name="gender" value="M" checked>Masculino</span>
+                        <span><input type="radio" name="gender" value="F">Feminino</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>Specialization</div>
+                    <div><input type="text" name="specializataion"></div>
+                </div>
+
+                <button type="submit">Salvar</button>
+            </section>
+        </form>
+    </div>
+{% endblock content %}
+
+</body>
+</html>

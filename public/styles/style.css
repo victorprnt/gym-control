@@ -1,0 +1,70 @@
+/* Import font from Google */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+    --color-primary: #4B5267;
+    --color-secondary: #E3170A;
+    --color-blue: #0496FF;
+    --color-celeste: #7AE7C7;
+    --color-variable: #A39171;
+    /* font-size: 60%; */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-primary);
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box; /* Respects the padding on a box, cause it will extends content to the border of the box */
+}
+
+header .links {
+}
+
+header .links a {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+header .links a+a {
+    margin-left: 32px;
+}
+
+header .links a:hover {
+    color: var(--color-celeste);
+}
+
+header .links a.active {
+    /* <a> will be bold to show the page where the user is at that moment*/
+}
+
+header .links a::after {
+    content: ""; /* Mandatory when using ::after */
+    width: 0;
+    height: 2px;
+    background-color: var(--color-celeste);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+header .links a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+
