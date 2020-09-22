@@ -8,7 +8,7 @@ const server = express()
 // Server configuration
 server.set("view engine", "njk")
 server.use(express.static("public"))
-server.use(express.urlencoded({extended:true}))
+server.use(express.urlencoded({ extended:true })) // It's a middleware that allow manipulation of the req.body, for example
 server.use(routes)
 
 // Nunjucks configuration
