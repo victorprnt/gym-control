@@ -12,7 +12,7 @@ server.use(express.urlencoded({ extended:true })) // It's a middleware that allo
 server.use(routes)
 
 // Nunjucks configuration
-nunjucks.configure("src/views", {
+nunjucks.configure("src/views/", {
     express: server,
     autoescape:false,
     noCache:true,

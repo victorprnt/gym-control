@@ -13,7 +13,7 @@ routes.get("/instructors", function (req, res) {
 
 // === Instructor pages ===
 // Instructor registering
-routes.get("/create", function(req, res) {
+routes.get("/instructors/create", function(req, res) {
     return res.render("instructors/create")
 })
 

@@ -8,6 +8,24 @@
       "gender": "M",
       "specialization": "crossfit",
       "created_at": 1602228488853
+    },
+    {
+      "id": 2,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 1601769600000,
+      "gender": "M",
+      "specialization": "crossfit, boxing",
+      "created_at": 1602230643879
+    },
+    {
+      "id": 3,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 1601683200000,
+      "gender": "Male",
+      "specialization": "Crossfit, Boxing, Swimming",
+      "created_at": 1602231916717
     }
   ]
 }

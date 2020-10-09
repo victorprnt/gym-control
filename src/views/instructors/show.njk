@@ -2,7 +2,7 @@
 
 {% block head %}
     <title>Instructor List</title>
-    <link rel="stylesheet" href="styles/partials/instructor.css">
+    <link rel="stylesheet" href="/styles/partials/instructor.css">
 {% endblock head %}
 
 {% block content %}
@@ -29,8 +29,8 @@
             <div class="item">
                 <div>Specializations</div>
                 <div>
-                    {% for service in services %}
-                        <span>{{ service }}</span>
+                    {% for specialization in instructor.specialization %}
+                        <span>{{ specialization }}</span>
                     {% endfor %}
                 </div>
             </div>

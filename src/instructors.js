@@ -4,7 +4,7 @@ const data = require("./data.json")
 // Show
 exports.show = function(req, res) {
     // req.params
-    const {id} = req.params
+    const { id } = req.params
 
     const foundInstructor = data.instructors.find(function(instructor) {
         return instructor.id == id
@@ -12,7 +12,15 @@ exports.show = function(req, res) {
 
     if (!foundInstructor) return res.send("Instructor not found!")
 
-    return res.render("instructors/show", { instructor: foundInstructor})
+    const instructor = {
+        ...foundInstructor, // spread: put inside this object, the infos of indicated object
+        birth: "",
+        created_at: "",
+        specialization: foundInstructor.specialization.split(","),
+    }
+    console.log(">>>>>>>>>>>>>"+instructor.specialization)
+
+    return res.render("instructors/show", { instructor: instructor})
 }
 
 // Function create 
