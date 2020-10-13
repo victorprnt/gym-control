@@ -1,0 +1,70 @@
+<div class="item">
+    <div>Name</div>
+    <div>
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Enter your name" 
+            value="{{ instructor.name }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Avatar</div>
+    <div>
+        <input 
+            type="url" 
+            name="avatar" 
+            placeholder="https://"
+            value="{{ instructor.avatar }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Birth Date</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth"
+            value="{{ instructor.birth }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Gender</div>
+    <div>
+        <span>
+            <input 
+                type="radio" 
+                name="gender" 
+                value="male" 
+                {% if instructor.gender == "male" %}
+                    checked
+                {% endif %}>
+                Male
+        </span>
+        <span>
+            <input 
+                type="radio" 
+                name="gender" 
+                value="female"
+                {% if instructor.gender == "female" %}
+                    checked
+                {% endif %}>
+                Female
+        </span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Specialization</div>
+    <div>
+        <input 
+            type="text" 
+            name="specialization" 
+            placeholder="Separate specializations using comma"
+            value="{{ instructor.specialization }}">
+    </div>
+</div>
+
+<button type="submit">Save</button>

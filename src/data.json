@@ -5,7 +5,7 @@
       "name": "Victor Parente",
       "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
       "birth": 1601510400000,
-      "gender": "M",
+      "gender": "male",
       "specialization": "crossfit",
       "created_at": 1602228488853
     },
@@ -14,7 +14,7 @@
       "name": "Victor Parente",
       "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
       "birth": 1601769600000,
-      "gender": "M",
+      "gender": "male",
       "specialization": "crossfit, boxing",
       "created_at": 1602230643879
     },
@@ -23,9 +23,54 @@
       "name": "Victor Parente",
       "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
       "birth": 1601683200000,
-      "gender": "Male",
+      "gender": "male",
       "specialization": "Crossfit, Boxing, Swimming",
       "created_at": 1602231916717
+    },
+    {
+      "id": 4,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 559699200000,
+      "gender": "female",
+      "specialization": "Crossfit, Boxing, Swimming",
+      "created_at": 1602303273574
+    },
+    {
+      "id": 5,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 559699200000,
+      "gender": "male",
+      "specialization": "Crossfit, Boxing, Swimming, Muay Thai",
+      "created_at": 1602467987273
+    },
+    {
+      "id": 6,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 559699200000,
+      "gender": "male",
+      "specialization": "Crossfit, Boxing, Swimming, Muay Thai",
+      "created_at": 1602468116066
+    },
+    {
+      "id": 7,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 559699200000,
+      "gender": "female",
+      "specialization": "Crossfit, Boxing, Swimming, Muay Thai",
+      "created_at": 1602468145786
+    },
+    {
+      "id": 8,
+      "name": "Victor Parente",
+      "avatar": "https://avatars1.githubusercontent.com/u/66752969?s=460&u=7db00b16fdc41f29241674672806700f782fcc5f&v=4",
+      "birth": 559699200000,
+      "gender": "female",
+      "specialization": "Crossfit, Boxing, Swimming, Muay Thai",
+      "created_at": 1602468198213
     }
   ]
 }

@@ -96,7 +96,8 @@ body .card input::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-body .card button[type="submit"] {
+body .card button[type="submit"],
+a.button {
     color: seashell;
     font-size: 16px;
     text-transform: uppercase;
@@ -107,4 +108,12 @@ body .card button[type="submit"] {
 
     background-color: var(--color-secondary);
     border-radius: 8px;
+}
+
+body .card a.button {
+    display: block;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
 }

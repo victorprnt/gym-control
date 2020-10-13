@@ -1,26 +1,33 @@
 const fs = require("fs")
 const data = require("./data.json")
+const { age, date } = require("./utils")
 
-// Show
-exports.show = function(req, res) {
+// Function show
+exports.show = function (req, res) {
     // req.params
     const { id } = req.params
 
-    const foundInstructor = data.instructors.find(function(instructor) {
+    const foundInstructor = data.instructors.find(function (instructor) {
         return instructor.id == id
     })
 
-    if (!foundInstructor) return res.send("Instructor not found!")
+    if (!foundInstructor) 
+        return res.send("Instructor not found!")
+
+    function since(timestamp) {
+        const since = new Date(timestamp)
+
+        return `${since.getMonth()} / ${since.getFullYear()}`
+    }
 
     const instructor = {
         ...foundInstructor, // spread: put inside this object, the infos of indicated object
-        birth: "",
-        created_at: "",
-        specialization: foundInstructor.specialization.split(","),
+        birth: age(foundInstructor.birth),
+        created_at: Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
+        specialization: foundInstructor.specialization.split(",")
     }
-    console.log(">>>>>>>>>>>>>"+instructor.specialization)
 
-    return res.render("instructors/show", { instructor: instructor})
+    return res.render("instructors/show", { instructor: instructor })
 }
 
 // Function create 
@@ -39,21 +46,40 @@ exports.post = function (req, res) {
     const id = Number(data.instructors.length + 1)
 
     data.instructors.push({
-        id, 
-        name, 
-        avatar, 
-        birth, 
-        gender, 
-        specialization, 
+        id,
+        name,
+        avatar,
+        birth,
+        gender,
+        specialization,
         created_at
     })
 
-	fs.writeFile("src/data.json", JSON.stringify(data, null, 2), function(err){
-        if (err) 
+    fs.writeFile("src/data.json", JSON.stringify(data, null, 2), function (err) {
+        if (err)
             return res.send("Write file error")
 
         return res.redirect("/instructors")
-        })
+    })
 
     // return res.send(req.body)
+}
+
+//Function Edit
+exports.edit = function (req, res) {
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return id == instructor.id
+    })
+
+    const instructor = {
+        ...foundInstructor,
+        birth: date(foundInstructor.birth)
+    }
+
+    if(!foundInstructor)
+        return res.send("Instructor not found!")
+
+    return res.render("instructors/edit", { instructor: instructor })
 }
